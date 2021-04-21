@@ -1,0 +1,15 @@
+{
+  "name": "sap.suite.ui.commons.tutorial.icecream.01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@ui5/cli": "^2.10.3"
+  }
+}
