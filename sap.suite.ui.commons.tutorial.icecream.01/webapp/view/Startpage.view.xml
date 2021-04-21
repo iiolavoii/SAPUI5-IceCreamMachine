@@ -15,7 +15,8 @@
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpagePFTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}" >
+					subheader="{i18n>startpagePFTileSubTitle}"
+					press=".onNavToProcessFlow" >
 					<tileContent>
 						<TileContent>
 							<content>
@@ -78,7 +79,8 @@
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpageUserReviewsTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}" >
+					subheader="{i18n>startpagePFTileSubTitle}"
+					press=".onNavToReviews" >
 					<tileContent>
 						<TileContent>
 							<content>
@@ -98,7 +100,8 @@
 				 <GenericTile
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
                     header="{i18n>startpageTestResultsTileTitle}"
-                    subheader="{i18n>startpageTestResultsTileSubTitle}">
+                    subheader="{i18n>startpageTestResultsTileSubTitle}"
+					press=".onNavToChartContainer">
                     <tileContent>
                         <TileContent>
                             <content>

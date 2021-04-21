@@ -32,6 +32,23 @@ sap.ui.define([
 				decimals: 1
 			});
 			return oFloatFormatter.format(value);
+		},
+
+		onNavToProcessFlow: function(){
+			this.getRouter().navTo("processFlow");
+		},
+
+		onNavToChartContainer: function(){
+			this.getRouter().navTo("chartContainer");
+		},
+
+		onNavToReviews: function(){
+			this.getRouter().navTo("reviews");
+		},
+
+		getRouter: function(){
+			return this.getOwnerComponent().getRouter();
 		}
+
 	});
 });
