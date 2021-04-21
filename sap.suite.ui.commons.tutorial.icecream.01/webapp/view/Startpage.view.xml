@@ -3,19 +3,18 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:layout="sap.ui.layout"
-	xmlns:microchart="sap.suite.ui.microchart" >
+	xmlns:microchart="sap.suite.ui.microchart">
 	<Page title="{i18n>title}">
-		<layout:VerticalLayout class="sapUiResponsiveMargin ">
+		<layout:VerticalLayout class="sapUiResponsiveMargin">
 			<Title
 				titleStyle="H2"
 				text="{i18n>startpageTilesGroupTitle}"
 				class="sapUiTinyMarginBegin"/>
 			<layout:HorizontalLayout allowWrapping="true">
-
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpagePFTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}" >
+					subheader="{i18n>startpagePFTileSubTitle}">
 					<tileContent>
 						<TileContent>
 							<content>
@@ -30,7 +29,6 @@
 						</TileContent>
 					</tileContent>
 				</GenericTile>
-
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{
@@ -43,7 +41,7 @@
 					}">
 					<tileContent>
 						<TileContent>
-								<content>
+							<content>
 								<microchart:BulletMicroChart
 									size="Responsive"
 									targetValue="{business>/plannedExpenses}"
@@ -74,40 +72,58 @@
 						</TileContent>
 					</tileContent>
 				</GenericTile>
-				
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-					header="{i18n>startpageUserReviewsTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}" >
+					header="{i18n>startpageUserReviewsTileTitle}">
 					<tileContent>
 						<TileContent>
 							<content>
 								<NumericContent
-									scale="%"
 									value="{
-										path: 'reviews>UserReviews',
+										path: 'reviews>/UserReviews',
 										formatter: '.getEntityCount'
 									}"
 									indicator="None"
-									valueColor="Neutral" />
+									valueColor="Neutral"/>
 							</content>
 						</TileContent>
 					</tileContent>
 				</GenericTile>
-
-				 <GenericTile
-                    class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-                    header="{i18n>startpageTestResultsTileTitle}"
-                    subheader="{i18n>startpageTestResultsTileSubTitle}">
-                    <tileContent>
-                        <TileContent>
-                            <content>
-                                <ImageContent src="sap-icon://temperature" />
-                            </content>
-                        </TileContent>
-                    </tileContent>
-                </GenericTile>
-				
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpageTestResultsTileTitle}"
+					subheader="{i18n>startpageTestResultsTileSubTitle}">
+					<tileContent>
+						<TileContent>
+							<content>
+								<ImageContent src="sap-icon://temperature"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<SlideTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					tiles="{news>/News}">
+					<GenericTile
+						backgroundImage="{news>image}"
+						state="{news>state}"
+						frameType="TwoByOne">
+						<tileContent>
+							<TileContent
+								footer="{
+									path: 'news>date',
+									formatter: '.formatJSONDate'
+								}">
+								<content>
+									<NewsContent
+										contentText="{news>content}"
+										subheader="{news>subheader}">
+									</NewsContent>
+								</content>
+							</TileContent>
+						</tileContent>
+					</GenericTile>
+				</SlideTile>
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
