@@ -92,18 +92,6 @@
 						</TileContent>
 					</tileContent>
 				</GenericTile>
-				<GenericTile
-					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-					header="{i18n>startpageTestResultsTileTitle}"
-					subheader="{i18n>startpageTestResultsTileSubTitle}">
-					<tileContent>
-						<TileContent>
-							<content>
-								<ImageContent src="sap-icon://temperature"/>
-							</content>
-						</TileContent>
-					</tileContent>
-				</GenericTile>
 
 				 <GenericTile
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
