@@ -9,6 +9,10 @@ sap.ui.define([
 
         onNavButtonPressed: function(){
             this.getOwnerComponent().getRouter().navTo("home")
+        },
+
+        getValuesDelta: function(fFirstValue, fSecondValue){
+            return fSecondValue-fFirstValue;
         }
     })
     
