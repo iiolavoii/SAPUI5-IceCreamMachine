@@ -3,8 +3,8 @@
 	xmlns="sap.suite.ui.commons"
 	xmlns:m="sap.m"
 	xmlns:mc="sap.suite.ui.microchart"
-    controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.ProcessFlow" >
-  <m:Page
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.ProcessFlow">
+	<m:Page
 		title="{i18n>processFlowTitle}"
 		showNavButton="true"
 		navButtonPress=".onNavButtonPressed"
@@ -36,6 +36,36 @@
 								class="sapUiSmallMargin"/>
 							<m:FlexBox width="6rem" height="6rem">
 								<mc:RadialMicroChart percentage="{business>/shareOwnProduction}"/>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox
+							width="16rem"
+							height="10rem"
+							alignItems="Center"
+							justifyContent="Center"
+							direction="Column">
+							<m:Title
+								text="{
+									parts: [
+									'i18n>processFlowChartsDeliveryTimeComparison',
+									'suppliers>/timeMeasure'
+								],
+								formatter: '.formatMessage'
+								}"
+								class="sapUiSmallMargin"/>
+							<m:FlexBox width="16rem" height="6rem" renderType="Bare">
+								<mc:ComparisonMicroChart
+									size="Responsive"
+									press=".press"
+									data="{suppliers>/Suppliers}">
+									<mc:data>
+										<mc:ComparisonMicroChartData
+											title="{suppliers>id}"
+											value="{suppliers>deliveryTime}"
+											displayValue="{suppliers>deliveryTime}"
+											color="{suppliers>deliveryTimeSemantics}"/>
+									</mc:data>
+								</mc:ComparisonMicroChart>
 							</m:FlexBox>
 						</m:FlexBox>
 					</m:HeaderContainer>
