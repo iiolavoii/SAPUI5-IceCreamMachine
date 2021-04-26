@@ -22,7 +22,7 @@ sap.ui.define([
         },
 
         getResourceBundle: function(){
-            return this.getOwnerComponent().getModel(i18n).getResourceBundle();
+            return this.getOwnerComponent().getModel("i18n").getResourceBundle();
         }
     })
     
